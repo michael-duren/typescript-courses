@@ -11,7 +11,8 @@
     "moduleResolution": "Node",
     "allowImportingTsExtensions": true,
     "baseUrl": ".",
-    "rootDir": "."
+    "rootDir": ".",
+    // "noImplicitAny": true
   },
   "include": [
     "src",
