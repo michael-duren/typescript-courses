@@ -5,8 +5,7 @@ import App from './ui/App'
 
 function initializeReactApp() {
   const appContainer = document.getElementById('appContainer')
-  if (appContainer === false)
-    throw new Error('No #appContainer found in DOM')
+  if (typeof appContainer === 'undefined') throw new Error('No #appContainer found in DOM')
   const root = createRoot(appContainer)
   root.render(React.createElement(App))
 }
