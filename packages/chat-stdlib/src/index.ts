@@ -50,7 +50,8 @@ export class Deferred<T> {
  * @internal
  */
 export function stringifyErrorValue(err: Error): string {
-  return `${err.name.toUpperCase()}: ${err.message}${err.stack || '(no stack trace information)'}`
+  return `${err.name.toUpperCase()}: ${err.message}
+${err.stack || '(no stack trace information)'}`
 }
 /**
  * Stringify a thrown value

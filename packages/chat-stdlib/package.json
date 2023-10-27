@@ -7,7 +7,10 @@
   "scripts": {
     "build": "yarn tsc",
     "lint": "yarn eslint src --ext js,ts",
-    "test": "yarn jest"
+    "test": "yarn build && yarn jest",
+    "watch": "yarn concurrently -c 'red,blue' --names 'TS,JEST' 'yarn watch-build' 'yarn watch-test'",
+    "watch-build": "yarn tsc --watch",
+    "watch-test": "yarn jest --watch"
   },
   "volta": {
     "node": "18.18.2",
@@ -22,6 +25,7 @@
     "@types/eslint": "^8",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
+    "concurrently": "^8.2.2",
     "eslint": "^8.52.0",
     "jest": "^29.7.0",
     "typescript": "5.3.0-beta"
